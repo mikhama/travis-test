@@ -1,0 +1,23 @@
+{
+  "name": "travis-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikhama/travis-test.git"
+  },
+  "author": "Dzmitry Tsebruk <mikhama@tut.by>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikhama/travis-test/issues"
+  },
+  "homepage": "https://github.com/mikhama/travis-test#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
