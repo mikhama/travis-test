@@ -11,6 +11,3 @@ jobs:
       script: npm start
     - stage: delivery
       script: - if [ $TRAVIS_BRANCH = 'master' ]; npm test; fi
-# branches:
-#   only:
-#   - master
