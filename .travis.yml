@@ -4,8 +4,8 @@ node_js:
 install:
   - npm install
 stages:
-  "Quality Gates" 
-  "Build"
+  - "Quality Gates" 
+  - "Build"
   - name: "Delivery"
     if: type != pull_request
         AND branch = master
