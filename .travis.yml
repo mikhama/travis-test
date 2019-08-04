@@ -10,4 +10,5 @@ jobs:
     - stage: running
       script: npm start
     - stage: delivery
-      script: - if [ $TRAVIS_BRANCH = 'master' ]; npm test; fi
+      script:
+        - $TRAVIS_BRANCH == "master" && npm test
