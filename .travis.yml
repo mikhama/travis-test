@@ -4,16 +4,20 @@ node_js:
 install:
   - npm install
 stages:
-  - test
-  - running
-  - name: delivery
+  - "Quality Gates" 
+  - "Build"
+  - name: "Delivery"
     if: type != pull_request
         AND branch = master
 jobs:
   include:
-    - stage: test
+    - stage: "Quality Gates"
+      name: "Linter"
       script: npm test 
-    - stage: running
-      script: npm start
+    - script: npm test 
+      name: "Unit Tests"
     - stage: delivery
       script: echo 'DELIVERYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
+branches:
+  only:
+    - master
