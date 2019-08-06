@@ -1,23 +1,18 @@
 language: node_js
 node_js:
-  - "10"
+- '10'
 install:
-  - npm install
+- npm install
 stages:
-  - "Quality Gates" 
-  - "Build"
-  - name: "Delivery"
-    if: type != pull_request
-        AND branch = master
+- Test
+- name: Delivery
+  if: type != pull_request AND branch = master
 jobs:
   include:
-    - stage: "Quality Gates"
-      name: "Linter"
-      script: npm test 
-    - script: npm test 
-      name: "Unit Tests"
-    - stage: delivery
-      script: echo 'DELIVERYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'
+  - stage: Test
+    script: npm test
+  - stage: Delivery
+    script: npm deploy
 branches:
   only:
-    - master
+  - master
