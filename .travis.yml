@@ -13,3 +13,7 @@ jobs:
 branches:
   only:
   - master
+addons:
+  ssh_known_hosts:
+  - 68.183.2.140
+  
