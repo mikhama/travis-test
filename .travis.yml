@@ -12,7 +12,7 @@ jobs:
   - stage: Test
     script: npm test
   - stage: Delivery
-    script: npm deploy
+    script: npm run deploy
 branches:
   only:
   - master
