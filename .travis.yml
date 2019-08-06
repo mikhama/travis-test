@@ -4,13 +4,10 @@ node_js:
 install:
 - npm install
 stages:
-# - Test
 - name: Delivery
   if: type != pull_request AND branch = master
 jobs:
   include:
-  # - stage: Test
-  #   script: npm test
   - stage: Delivery
     script: npm run deploy
 branches:
