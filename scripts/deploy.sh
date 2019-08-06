@@ -1,6 +1,4 @@
 #!/bin/bash
-set -x
-
 openssl aes-256-cbc -K $encrypted_f054ef30fcc5_key -iv $encrypted_f054ef30fcc5_iv -in deploy_key.enc -out deploy_key -d
 
 rm deploy_key.enc
