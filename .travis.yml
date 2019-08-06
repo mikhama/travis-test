@@ -16,6 +16,3 @@ jobs:
 branches:
   only:
   - master
-addons:
-  ssh_known_hosts:
-  - $SERVER_ADDRESS
