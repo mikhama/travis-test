@@ -1,5 +1,5 @@
 #!/bin/bash
-openssl aes-256-cbc -K $encrypted_2dfeb9a49df0_key -iv $encrypted_2dfeb9a49df0_iv -in deploy_key.enc -out deploy_key -d
+openssl aes-256-cbc -K $encrypted_3c02569a2ab8_key -iv $encrypted_3c02569a2ab8_iv -in deploy_key.enc -out deploy_key -d
 
 rm deploy_key.enc
 chmod 600 deploy_key
